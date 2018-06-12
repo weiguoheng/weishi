@@ -1,0 +1,71 @@
+<import src="../../components/toast/toast.wxml" />
+<template is="toast" data="{{ ...$wux.toast }}" />
+<form report-submit="true" catchsubmit="formSubmit">
+<input style="display:none" name='menu_id' value="{{menu_id}}" />
+<input style="display:none" name='wxa_id' value="{{card_info.wxa_id}}" />
+<input style="display:none" name='custom_id' value="{{card_info.custom_id}}" />
+  <view class="form-box">
+    <view class="general-box">
+      <view class="input-name">姓名</view>
+      <input style="height:50px;line-height:50px;text-align:right;padding-right:3vw;" placeholder-class="input-holder" maxlength="11" name='username' value="{{phone}}" placeholder="输入姓名" />
+    </view>
+    <view class="general-box">
+      <view class="input-name">手机号</view>
+      <input style="height:50px;line-height:50px;text-align:right;padding-right:3vw;" placeholder-class="input-holder" maxlength="11" name='phone' value="{{phone}}" placeholder="输入手机号码" />
+    </view>
+    <view class="general-box">
+      <view class="input-name">职业</view>
+      <input style="height:50px;line-height:50px;text-align:right;padding-right:3vw;" placeholder-class="input-holder" maxlength="11" name='username' value="{{phone}}" placeholder="输入职业" />
+    </view>
+    <view class="general-box" style="padding-bottom:1px;">
+      <view class="input-name">出生日期（农历）</view>
+      <picker mode="date" style="background:#fff;width:100%;text-align:right;color:#868686;height:90%;" name="date" value="{{date}}"bindchange="bindDateChange">
+        <view class="picker">
+          <!-- <input style="display:none;" name='date' value="{{date}}" /> -->
+          {{date}}
+          <i class="icon-right iconfont" style="padding-right:3vw;font-size:0.9em;"></i>
+        </view>
+      </picker>
+    </view>
+    <view class="general-box" style="padding-bottom:1px;">
+      <view class="input-name">出生日期（公历）</view>
+      <picker mode="date" style="background:#fff;width:100%;text-align:right;color:#868686;height:90%;" name="date" value="{{date}}"bindchange="bindDate2Change">
+        <view class="picker">
+          {{date2}}
+          <i class="icon-right iconfont" style="padding-right:3vw;font-size:0.9em;"></i>
+        </view>
+      </picker>
+    </view>
+    <view class="general-box" style="padding-bottom:1px;">
+      <view class="input-name">去世日期（农历,可不填）</view>
+      <picker mode="date" style="background:#fff;width:100%;text-align:right;color:#868686;height:90%;" name="date" value="{{date}}"bindchange="bindDate3Change">
+        <view class="picker">
+        <!-- <input style="display:none;" name='time' value="{{time}}" /> -->
+          {{date3}}
+          <i class="icon-right iconfont" style="padding-right:3vw;font-size:0.9em;"></i>
+        </view>
+      </picker>
+    </view>
+    
+    <view class="general-box" style="height:80px;">
+      <view class="input-name">简介</view>
+      <input name="remark" style="text-align:right;padding-right:3vw;height:50px;line-height:50px;" placeholder-class="input-holder" placeholder="备注信息" />
+    </view>
+  </view>
+  <view class="pay-box" style="margin:20px 0;">
+    <view class="general-box" style="height:120px;">
+      <image style="height:80px;width:80px;margin:20px;float:left;margin-left:10px;" src="{{menu_file}}"></image>
+      <view class="coupon-name" style="padding-top:3vw;">{{menu_name}}
+        <view style='float:right;color:{{color}}'>￥{{menu_price}}</view>
+      </view>
+    </view>
+  </view>
+  <view style="background:#fff;padding:0 15px;margin-top:10px;margin-bottom:60px;border-top:solid 0.5px #e5e5e5;border-bottom:solid 0.5px #e5e5e5;">
+    <view style="height:44px;line-height:44px;paddng:0 15px;border-bottom:solid 1px #e5e5e5;text-align:right;">合计：<i style='color:{{color}}'>￥{{menu_price}}</i></view>
+    <view style="height:44px;line-height:44px;text-align:center;color:{{color}}" bindtap="tel"><i style="font-size:15px;margin-right:5px;" class='iconfont icon-call'></i>联系商家</view>
+  </view>
+  <view class="footer">
+    <view style="background:#fff;background:#fff;height:14vw;line-height:14vw;text-align:right;float:left;width:60%;">待支付：<i style='color:{{color}};margin-right:10px;'>￥{{menu_price}}</i></view>
+    <button class="create-btn" formType="submit" style="background:{{color}};width:40%;float:right;" formType="submit">提交预约</button>
+  </view>
+</form>

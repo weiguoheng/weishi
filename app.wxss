@@ -1,0 +1,40 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.one-circle{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.center{
+  display: flex;
+  align-items:center;
+  flex-direction:column;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 324880 */
+  src: url('//at.alicdn.com/t/font_324880_d0ptcs5h7tvmfgvi.eot');
+  src: url('//at.alicdn.com/t/font_324880_d0ptcs5h7tvmfgvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_324880_d0ptcs5h7tvmfgvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_324880_d0ptcs5h7tvmfgvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_324880_d0ptcs5h7tvmfgvi.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    }
+
+.icon-right:before {
+  content: "\e601";
+}

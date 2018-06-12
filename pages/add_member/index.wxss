@@ -1,0 +1,52 @@
+.input-name {
+  float: left;
+  margin-left: 3vw;
+  line-height: 50px;
+}
+
+.form-box {
+  background: #fff;
+}
+
+.general-box {
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top:solid 0.5px #e5e5e5;
+}
+/*占位符样式*/
+
+.input-holder {
+  color: #868686;
+  height: 50px;
+  line-height: 50px;
+}
+.pay-box {
+  padding: 0 3vw;
+  background: #fff;
+}
+.coupon-name {
+  height: 7.5vw;
+}
+/*保存按钮*/
+
+.create-btn {
+  text-align: center;
+  color: #fff;
+  padding: 2px 8px;
+  height: 14vw;
+  line-height: 14vw;
+}
+button::after {
+  border: 0 none;
+}
+button{
+  border-radius: 0;
+}

@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="center">
+<navigator url="../add_member/index" class="one-circle add_member" style="background:#fe8d2f;color:#fff;">添加成员</navigator>
+<view class="one-circle add_member" style="background:#3ede2f;color:#fff;">我的组员</view>
+</view>
